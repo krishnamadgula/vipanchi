@@ -1,4 +1,4 @@
-# Vipanchi
+# Vipanchi 🎼
 
 I'm trying to experiment synthesizing carnatic music my own way.
 
