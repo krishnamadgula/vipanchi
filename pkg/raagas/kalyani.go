@@ -2,7 +2,7 @@ package raagas
 
 import "github.com/synth-veena/pkg/types"
 
-var KalyaniRaagam = types.NewSimpleRaagam("Kalyani", []float32{
+var KalyaniRaagam = types.NewSimpleRaagam("Kalyani", []string{
 	types.SLower,
 	types.R2,
 	types.G3,

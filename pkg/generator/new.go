@@ -1,6 +1,8 @@
 package generator
 
 import (
+	"bytes"
+	"io"
 	"os"
 
 	"github.com/google/uuid"
@@ -11,18 +13,9 @@ import (
 type GenerateFunc func(
 	numberOfTaalas int,
 	kaalam int,
-	scale float32,
+	scale string,
 	raagam types.Raagam,
-	taalam types.Taalam) (noteFrequencies []float32)
-
-// type Generator struct {
-// 	fn     GenerateFunc
-// 	raagam types.Raagam
-// 	taalam types.Taalam
-// 	// tempo beats per minute
-// 	tempo  int
-// 	cycles int
-// }
+	taalam types.Taalam) *types.SwaraLipi
 
 func Generate(
 	fn GenerateFunc,
@@ -31,17 +24,31 @@ func Generate(
 	kaalam int,
 	tempo,
 	cycles int) error {
-	generatedFileName := raagam.Name + "-" + taalam.Name + uuid.NewString() + ".wav"
-	outFile, err := os.Create(generatedFileName)
+	fileName := raagam.Name + "-" + taalam.Name + uuid.NewString()
+	generatedWavFileName := fileName + ".wav"
+	generatedLipiFileName := fileName + ".txt"
+	outFile, err := os.Create(generatedWavFileName)
+	if err != nil {
+		return err
+	}
+	defer outFile.Close()
+
+	outDocFile, err := os.Create(generatedLipiFileName)
 	if err != nil {
 		return err
 	}
 
-	defer outFile.Close()
-	encoder := encoders.NewWAVEncoder(outFile, tempo)
-	notes := RandomGenerate(cycles, kaalam, types.CScale, raagam, taalam)
+	defer outDocFile.Close()
 
-	if err := encoder.Encode(notes); err != nil {
+	encoder := encoders.NewWAVEncoder(outFile, tempo)
+	lipi := RandomGenerate(cycles, kaalam, types.CScale, raagam, taalam)
+
+	_, err = io.Copy(outDocFile, bytes.NewBufferString(lipi.Doc()))
+	if err != nil {
+		return err
+	}
+
+	if err := encoder.Encode(lipi.Notes()); err != nil {
 		return err
 	}
 

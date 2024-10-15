@@ -2,7 +2,7 @@ package raagas
 
 import "github.com/synth-veena/pkg/types"
 
-var MayaMalavaGowlaRaagam = types.NewSimpleRaagam("Maya_Malava_Gowla", []float32{
+var MayaMalavaGowlaRaagam = types.NewSimpleRaagam("Maya_Malava_Gowla", []string{
 	types.SLower,
 	types.R1,
 	types.G3,

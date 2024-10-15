@@ -22,94 +22,60 @@ within a single taalam
 func RandomGenerate(
 	numberOfTaalas int,
 	kaalam int,
-	scale float32,
+	scale string,
 	raagam types.Raagam,
-	taalam types.Taalam) []float32 {
+	taalam types.Taalam) *types.SwaraLipi {
 
 	slog.Info("Synthesizing music in raagam: " + raagam.Name)
 
-	output := []float32{}
+	lipi := types.NewSwaraLipi(&raagam, &taalam, kaalam)
+
 	start := types.SLower
 	for i := 0; i < numberOfTaalas*kaalam; i++ {
-		output = append(output, randomSingleTaalam(taalam, raagam, start)...)
-		start = randomNextNote(raagam, output[len(output)-1])
+		last := randomSingleTaalam(lipi, taalam, raagam, start)
+
+		start = randomNextNote(raagam, last)
 	}
 
-	return output
+	return lipi
 }
 
-func randomSingleTaalam(taalam types.Taalam, raagam types.Raagam, start float32) []float32 {
-	output := []float32{}
+func randomSingleTaalam(
+	lipi *types.SwaraLipi,
+	taalam types.Taalam,
+	raagam types.Raagam,
+	start string) (endNote string) {
 	for i := range taalam.Sequence {
 		for j := 0; j < taalam.Sequence[i]; j++ {
 			cur := randomNextNote(raagam, start)
-			output = append(output, cur)
+			lipi.AppendMatra(cur)
 			start = cur
 		}
 	}
 
-	return output
+	return start
 }
 
-func randomNextNote(raagam types.Raagam, previous float32) float32 {
-	/*
-		seed - 1234 (hardcoded)
-		0 - same swara
-		1 - aaroh / same swara
-		2 - avroh / same swara
-	*/
-	const (
-		same     = 0
-		aarohOne = 1
-		aarohTwo = 2
-		avrohOne = 3
-		avrohTwo = 4
-	)
-
-	num := rand.Intn(30000) % 5
-	switch num {
-	case same:
-		return previous
-	case aarohOne:
-		if v, err := raagam.Aaroh(previous); err != nil {
+func randomNextNote(raagam types.Raagam, previous string) string {
+	direction := rand.Intn(5000) % 3
+	step := rand.Intn(5000)%2 + 1
+	switch direction {
+	case 1:
+		if v, err := raagam.Aaroh(previous, step); err != nil {
 			return previous
 		} else {
 			return v
 		}
 
-	case aarohTwo:
-		if v, err := raagam.Aaroh(previous); err != nil {
-			return previous
-		} else {
-			out, err := raagam.Aaroh(v)
-			if err != nil {
-				return v
-			}
-
-			return out
-		}
-
-	case avrohOne:
-		if v, err := raagam.Avroh(previous); err != nil {
+	case 2:
+		if v, err := raagam.Avroh(previous, step); err != nil {
 			return previous
 		} else {
 			return v
-		}
-
-	case avrohTwo:
-		if v, err := raagam.Avroh(previous); err != nil {
-			return previous
-		} else {
-			out, err := raagam.Avroh(v)
-			if err != nil {
-				return v
-			}
-
-			return out
 		}
 
 	default:
-		return 0
+		return previous
 	}
 }
 

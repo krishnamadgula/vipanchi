@@ -9,27 +9,53 @@ P (G4) – 392.00 Hz
 D₁ (A♭4) – 415.30 Hz
 N₃ (B4) – 493.88 Hz
 */
-const (
-	CScale = 261.63
-	AScale = 440
-)
+
+var Swaras = map[string]float32{
+	SLower: SLowerFreq,
+	R1:     R1Freq,
+	R2:     R2Freq,
+	G2:     G2Freq,
+	G3:     G3Freq,
+	M1:     M1Freq,
+	M2:     M2Freq,
+	P:      PFreq,
+	D1:     D1Freq,
+	D2:     D2Freq,
+	N2:     N2Freq,
+	N3:     N3Freq,
+	SUpper: SUpperFreq,
+}
 
 const (
-	SLower = float32(261.63)
-	R1     = float32(277.18)
-	R2     = float32(293.66)
+	SLowerFreq = float32(261.63)
+	SLower     = "SLower"
+	R1Freq     = float32(277.18)
+	R1         = "R1"
+	R2Freq     = float32(293.66)
+	R2         = "R2"
 
-	G2 = float32(311.13)
-	G3 = float32(329.63)
+	G2Freq = float32(311.13)
+	G2     = "G2"
+	G3Freq = float32(329.63)
+	G3     = "G3"
 
-	M1 = float32(349.23)
-	M2 = float32(369.99)
+	M1Freq = float32(349.23)
+	M1     = "M1"
+	M2Freq = float32(369.99)
+	M2     = "M2"
 
-	P  = float32(392)
-	D1 = float32(415.30)
-	D2 = float32(440)
+	PFreq = float32(392)
+	P     = "P"
 
-	N2     = float32(466.16)
-	N3     = float32(493.88)
-	SUpper = float32(523.25)
+	D1Freq = float32(415.30)
+	D1     = "D1"
+	D2Freq = float32(440)
+	D2     = "D2"
+
+	N2Freq     = float32(466.16)
+	N2         = "N2"
+	N3Freq     = float32(493.88)
+	N3         = "N3"
+	SUpperFreq = float32(523.25)
+	SUpper     = "SUpper"
 )

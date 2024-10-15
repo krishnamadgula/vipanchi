@@ -10,7 +10,7 @@ P (G4): 392.00 Hz
 D2 (A4): 440.00 Hz
 S (C5): 523.25 Hz
 */
-var MohanaRaagam = types.NewSimpleRaagam("Mohana", []float32{
+var MohanaRaagam = types.NewSimpleRaagam("Mohana", []string{
 	types.SLower,
 	types.R2,
 	types.G3,
