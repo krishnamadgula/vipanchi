@@ -5,7 +5,6 @@ import (
 	"io"
 	"os"
 
-	"github.com/google/uuid"
 	"github.com/synth-veena/pkg/encoders"
 	"github.com/synth-veena/pkg/types"
 )
@@ -24,7 +23,7 @@ func Generate(
 	kaalam int,
 	tempo,
 	cycles int) error {
-	fileName := raagam.Name + "-" + taalam.Name + uuid.NewString()
+	fileName := raagam.Name + "-" + taalam.Name
 	generatedWavFileName := fileName + ".wav"
 	generatedLipiFileName := fileName + ".txt"
 	outFile, err := os.Create(generatedWavFileName)
@@ -40,7 +39,7 @@ func Generate(
 
 	defer outDocFile.Close()
 
-	encoder := encoders.NewWAVEncoder(outFile, tempo)
+	encoder := encoders.NewWAVEncoder(outFile, tempo, kaalam)
 	lipi := RandomGenerate(cycles, kaalam, types.CScale, raagam, taalam)
 
 	_, err = io.Copy(outDocFile, bytes.NewBufferString(lipi.Doc()))
@@ -48,9 +47,13 @@ func Generate(
 		return err
 	}
 
-	if err := encoder.Encode(lipi.Notes()); err != nil {
-		return err
+	for _, line := range lipi.Notes() {
+		for _, freq := range line {
+			if err := encoder.Encode(freq); err != nil {
+				return err
+			}
+		}
 	}
 
-	return nil
+	return encoder.Close()
 }

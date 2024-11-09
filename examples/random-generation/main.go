@@ -11,7 +11,15 @@ import (
 )
 
 func main() {
-	err := generator.Generate(generator.RandomGenerate, *raagas.HindolaRaagam, taalas.Aadi, types.Kaala2nd, 120, 10)
+	err := generator.Generate(
+		generator.RandomGenerate,
+		*raagas.ThodiRaaga,
+		taalas.Rupaka,
+		types.Kaala2nd,
+		90,
+		10,
+	)
+
 	if err != nil {
 		slog.Error("unable to generate" + err.Error())
 		os.Exit(1)

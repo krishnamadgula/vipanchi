@@ -1,0 +1,76 @@
+
+Raagam: Sindhu_Bhairavi
+Taalam: Rupaka
+Kaala: 2
+
+
+Line:
+    SLower, R2
+    G2, R2
+    R2, SLower
+    SLower, R2
+    SLower, R2
+
+Line:
+    G2, M1
+    M1, M1
+    M1, P
+    P, M1
+    G2, M1
+
+Line:
+    R2, R2
+    SLower, R2
+    R2, SLower
+    R2, G2
+    G2, M1
+
+Line:
+    M1, P
+    M1, M1
+    M1, M1
+    M1, M1
+    M1, G2
+
+Line:
+    R2, SLower
+    SLower, SLower
+    SLower, SLower
+    SLower, SLower
+    R2, SLower
+
+Line:
+    R2, R2
+    SLower, SLower
+    SLower, SLower
+    R2, SLower
+    R2, G2
+
+Line:
+    G2, G2
+    R2, SLower
+    R2, SLower
+    SLower, SLower
+    SLower, R2
+
+Line:
+    G2, R2
+    G2, R2
+    R2, R2
+    R2, R2
+    R2, SLower
+
+Line:
+    R2, G2
+    M1, P
+    M1, G2
+    G2, G2
+    R2, R2
+
+Line:
+    R2, G2
+    M1, M1
+    M1, P
+    D2, D2
+    D2, P
+

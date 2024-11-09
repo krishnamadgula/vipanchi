@@ -1,0 +1,76 @@
+
+Raagam: Thodi
+Taalam: Rupaka
+Kaala: 2
+
+
+Line:
+    SLower, R1
+    R1, G2
+    M1, P
+    P, P
+    P, M1
+
+Line:
+    P, M1
+    G2, M1
+    G2, M1
+    M1, G2
+    G2, M1
+
+Line:
+    M1, P
+    D1, D1
+    D1, N2
+    D1, D1
+    D1, D1
+
+Line:
+    N2, SUpper
+    SUpper, SUpper
+    SUpper, SUpper
+    SUpper, SUpper
+    SUpper, SUpper
+
+Line:
+    D1, D1
+    N2, N2
+    D1, N2
+    SUpper, SUpper
+    SUpper, SUpper
+
+Line:
+    N2, N2
+    SUpper, SUpper
+    N2, N2
+    SUpper, SUpper
+    SUpper, SUpper
+
+Line:
+    SUpper, SUpper
+    SUpper, N2
+    SUpper, SUpper
+    SUpper, SUpper
+    SUpper, N2
+
+Line:
+    D1, N2
+    SUpper, SUpper
+    N2, SUpper
+    SUpper, N2
+    SUpper, N2
+
+Line:
+    D1, D1
+    P, M1
+    G2, M1
+    G2, G2
+    M1, P
+
+Line:
+    D1, D1
+    D1, D1
+    N2, N2
+    SUpper, N2
+    SUpper, SUpper
+

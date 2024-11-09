@@ -6,11 +6,9 @@ var AanandaBhairaviRaaga = types.NewRaagam("Aananda_Bhairavi", []string{
 	types.SLower,
 	types.G2,
 	types.R2,
-	types.G2,
 	types.M1,
 	types.P,
 	types.D2,
-	types.P,
 	types.SUpper,
 }, []string{
 	types.SUpper,
@@ -19,7 +17,6 @@ var AanandaBhairaviRaaga = types.NewRaagam("Aananda_Bhairavi", []string{
 	types.P,
 	types.M1,
 	types.G2,
-	types.M1,
 	types.R2,
 	types.SLower,
 })

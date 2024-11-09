@@ -31,9 +31,8 @@ func RandomGenerate(
 	lipi := types.NewSwaraLipi(&raagam, &taalam, kaalam)
 
 	start := types.SLower
-	for i := 0; i < numberOfTaalas*kaalam; i++ {
+	for i := 0; i < numberOfTaalas; i++ {
 		last := randomSingleTaalam(lipi, taalam, raagam, start)
-
 		start = randomNextNote(raagam, last)
 	}
 
@@ -47,9 +46,11 @@ func randomSingleTaalam(
 	start string) (endNote string) {
 	for i := range taalam.Sequence {
 		for j := 0; j < taalam.Sequence[i]; j++ {
-			cur := randomNextNote(raagam, start)
-			lipi.AppendMatra(cur)
-			start = cur
+			for range lipi.Kaala {
+				cur := randomNextNote(raagam, start)
+				lipi.AppendMatra(cur)
+				start = cur
+			}
 		}
 	}
 
@@ -58,17 +59,16 @@ func randomSingleTaalam(
 
 func randomNextNote(raagam types.Raagam, previous string) string {
 	direction := rand.Intn(5000) % 3
-	step := rand.Intn(5000)%2 + 1
 	switch direction {
 	case 1:
-		if v, err := raagam.Aaroh(previous, step); err != nil {
+		if v, err := raagam.AarohOne(previous); err != nil {
 			return previous
 		} else {
 			return v
 		}
 
 	case 2:
-		if v, err := raagam.Avroh(previous, step); err != nil {
+		if v, err := raagam.AvrohOne(previous); err != nil {
 			return previous
 		} else {
 			return v

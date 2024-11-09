@@ -47,7 +47,10 @@ func (s *SwaraLipi) AppendMatra(matra string) {
 
 	lastLine := s.Lines[len(s.Lines)-1]
 	if len(lastLine.Aksharas) == s.lineLength {
-		s.Lines = append(s.Lines, &Line{})
+		lastAkshara := lastLine.Aksharas[len(lastLine.Aksharas)-1]
+		if len(lastAkshara.Matras) == s.Kaala {
+			s.Lines = append(s.Lines, &Line{})
+		}
 	}
 
 	lastLine = s.Lines[len(s.Lines)-1]
@@ -63,24 +66,34 @@ func (s *SwaraLipi) AppendMatra(matra string) {
 
 	lastAkshara = lastLine.Aksharas[len(lastLine.Aksharas)-1]
 	lastAkshara.appendMatra(matra)
-
 }
 
-func (s *SwaraLipi) Notes() []float32 {
-	var swaras []string
+
+func (s *SwaraLipi) Notes() [][]float32 {
+	swaras := [][]string{}
 
 	// Loop through each line in the SwaraLipi
 	for _, line := range s.Lines {
 		// Loop through each Akshara in the line
+		swaras = append(swaras, []string{})
 		for _, akshara := range line.Aksharas {
 			// Append all Matras (swaras) from the Akshara to the result
-			swaras = append(swaras, akshara.Matras...)
+			swaras[len(swaras)-1] = append(
+				swaras[len(swaras)-1],
+				akshara.Matras...,
+			)
 		}
 	}
 
-	frequencies := make([]float32, 0, len(swaras))
-	for _, swara := range swaras {
-		frequencies = append(frequencies, Swaras[swara])
+	frequencies := make([][]float32, len(swaras))
+	for _, swaraLine := range swaras {
+		frequencies = append(frequencies, []float32{})
+		for _, s := range swaraLine {
+			frequencies[len(frequencies)-1] = append(
+				frequencies[len(frequencies)-1],
+				Swaras[s],
+			)
+		}
 	}
 
 	return frequencies

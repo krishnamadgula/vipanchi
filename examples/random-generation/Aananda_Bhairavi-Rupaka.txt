@@ -1,0 +1,41 @@
+
+Raagam: Aananda_Bhairavi
+Taalam: Rupaka
+Kaala: 4
+
+
+Line:
+    SLower, G2, R2, M1
+    P, P, M1, P
+    M1, M1, M1, M1
+    M1, P, P, M1
+    G2, R2, R2, R2
+
+Line:
+    G2, G2, G2, R2
+    R2, R2, M1, G2
+    R2, M1, G2, G2
+    R2, M1, P, P
+    P, D2, P, D2
+
+Line:
+    M1, G2, R2, R2
+    M1, P, D2, D2
+    P, D2, P, D2
+    D2, P, M1, P
+    M1, G2, R2, M1
+
+Line:
+    G2, G2, G2, R2
+    SLower, G2, G2, R2
+    SLower, SLower, G2, G2
+    G2, R2, M1, P
+    D2, P, P, M1
+
+Line:
+    R2, M1, P, M1
+    M1, P, D2, D2
+    P, P, P, P
+    P, P, P, M1
+    M1, P, P, P
+
