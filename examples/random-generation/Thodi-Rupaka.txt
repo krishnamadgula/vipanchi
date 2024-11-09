@@ -1,76 +1,41 @@
 
 Raagam: Thodi
 Taalam: Rupaka
-Kaala: 2
+Kaala: 4
 
 
 Line:
-    SLower, R1
-    R1, G2
-    M1, P
-    P, P
-    P, M1
+    SLower, R1, R1, G2
+    M1, M1, P, P
+    D1, N2, D1, P
+    M1, M1, G2, R1
+    R1, G2, G2, R1
 
 Line:
-    P, M1
-    G2, M1
-    G2, M1
-    M1, G2
-    G2, M1
+    SLower, SLower, SLower, SLower
+    R1, G2, M1, M1
+    M1, M1, G2, M1
+    P, P, P, M1
+    G2, M1, M1, P
 
 Line:
-    M1, P
-    D1, D1
-    D1, N2
-    D1, D1
-    D1, D1
+    G2, M1, M1, P
+    P, D1, N2, N2
+    N2, D1, P, P
+    P, M1, M1, M1
+    M1, M1, P, D1
 
 Line:
-    N2, SUpper
-    SUpper, SUpper
-    SUpper, SUpper
-    SUpper, SUpper
-    SUpper, SUpper
+    D1, N2, D1, P
+    M1, G2, R1, SLower
+    SLower, SLower, SLower, SLower
+    SLower, SLower, SLower, SLower
+    R1, G2, R1, SLower
 
 Line:
-    D1, D1
-    N2, N2
-    D1, N2
-    SUpper, SUpper
-    SUpper, SUpper
-
-Line:
-    N2, N2
-    SUpper, SUpper
-    N2, N2
-    SUpper, SUpper
-    SUpper, SUpper
-
-Line:
-    SUpper, SUpper
-    SUpper, N2
-    SUpper, SUpper
-    SUpper, SUpper
-    SUpper, N2
-
-Line:
-    D1, N2
-    SUpper, SUpper
-    N2, SUpper
-    SUpper, N2
-    SUpper, N2
-
-Line:
-    D1, D1
-    P, M1
-    G2, M1
-    G2, G2
-    M1, P
-
-Line:
-    D1, D1
-    D1, D1
-    N2, N2
-    SUpper, N2
-    SUpper, SUpper
+    G2, R1, R1, R1
+    G2, R1, SLower, SLower
+    SLower, R1, R1, R1
+    SLower, R1, G2, R1
+    SLower, SLower, R1, R1
 

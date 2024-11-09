@@ -6,6 +6,7 @@ import (
 
 	"github.com/go-audio/audio"
 	"github.com/go-audio/wav"
+	"github.com/synth-veena/pkg/instruments"
 )
 
 const KHz44 = 44_100
@@ -13,12 +14,14 @@ const Amplitude = 32767
 
 type WAVEncoder struct {
 	// tempo - beats per minute
-	Tempo  int
-	Kaalam int
-	e      *wav.Encoder
+	Tempo      int
+	Kaalam     int
+	Instrument instruments.Instrument
+	e          *wav.Encoder
 }
 
-func NewWAVEncoder(output io.WriteSeeker, tempo, Kaalam int) *WAVEncoder {
+func NewWAVEncoder(output io.WriteSeeker,
+	tempo, Kaalam int) *WAVEncoder {
 	// TODO revisit encoder initialization, currently it is one time use
 	e := wav.NewEncoder(output, KHz44, 16, 1, 1)
 	return &WAVEncoder{e: e, Tempo: tempo, Kaalam: Kaalam}
@@ -41,7 +44,6 @@ func (w *WAVEncoder) Encode(freq float32) error {
 	})
 }
 
-
 // generateSineWave generates a sine wave with harmonics for the given frequency and duration
 // tempo is in beats per minute, rate is sample rate in Hz
 func generateSineWave(freq float32, tempo, rate int) []int {
@@ -62,13 +64,11 @@ func generateSineWave(freq float32, tempo, rate int) []int {
 
 		// Fundamental frequency
 		sample := math.Sin(angularFreq*t) * (Amplitude / 2)
-
-		// Add harmonics with decreasing amplitude
-		// sample += math.Sin(2*angularFreq*t) * (Amplitude / 5)  // 2nd harmonic
-		// sample += math.Sin(3*angularFreq*t) * (Amplitude / 10) // 3rd harmonic
-		// sample += math.Sin(4*angularFreq*t) * (Amplitude / 20) // 4th harmonic
-		// sample += math.Sin(5*angularFreq*t) * (Amplitude / 40) // 5th harmonic
-
+		sample *= instruments.GetEnvelopeMultiplier(
+			t,
+			float64(numSamples)/float64(rate),
+			instruments.Veena,
+		)
 		// Convert to integer and clip to prevent overflow
 		sampleInt := int(sample)
 		if sampleInt > Amplitude {

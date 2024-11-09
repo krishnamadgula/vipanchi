@@ -15,9 +15,9 @@ func main() {
 		generator.RandomGenerate,
 		*raagas.ThodiRaaga,
 		taalas.Rupaka,
-		types.Kaala2nd,
-		90,
-		10,
+		types.Kaala3rd,
+		180,
+		5,
 	)
 
 	if err != nil {
