@@ -14,4 +14,5 @@ var Violin = Instrument{
 	Decay:   0.1,  // Short decay
 	Sustain: 0.85, // Strong sustain for long bow strokes
 	Release: 0.15, // Medium-quick release
+	Overlap: 0.3,  // Moderate overlap for legato bowing effect
 }

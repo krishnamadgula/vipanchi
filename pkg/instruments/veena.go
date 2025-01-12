@@ -15,4 +15,5 @@ var Veena = Instrument{
 	Decay:   0.1,  // Short decay
 	Sustain: 0.7,  // Strong sustain
 	Release: 0.2,  // Medium release
+	Overlap: 0.05, // Moderate overlap for legato effect
 }

@@ -1,0 +1,106 @@
+
+Raagam: Brindavana_Saarangi
+Taalam: Aadi
+Kaala: 3
+
+
+Line:
+    SLower, SLower, SLower
+    SLower, SLower, R2
+    R2, R2, SLower
+    SLower, SLower, SLower
+    SLower, SLower, SLower
+    SLower, R2, SLower
+    R2, R2, R2
+    SLower, SLower, SLower
+
+Line:
+    SLower, SLower, SLower
+    SLower, R2, G3
+    M1, M1, P
+    M1, M1, P
+    D2, P, D2
+    P, M1, M1
+    G3, R2, R2
+    SLower, SLower, SLower
+
+Line:
+    G3, M1, M1
+    M1, P, M1
+    M1, M1, G3
+    R2, SLower, SLower
+    R2, G3, M1
+    G3, G3, M1
+    P, D2, P
+    D2, P, P
+
+Line:
+    G3, R2, G3
+    G3, M1, P
+    M1, G3, R2
+    R2, R2, G3
+    R2, SLower, SLower
+    SLower, R2, R2
+    G3, R2, SLower
+    SLower, R2, G3
+
+Line:
+    P, M1, P
+    D2, D2, D2
+    P, M1, P
+    M1, G3, M1
+    M1, M1, G3
+    G3, G3, M1
+    G3, G3, R2
+    SLower, SLower, SLower
+
+Line:
+    SLower, SLower, SLower
+    SLower, SLower, R2
+    G3, M1, P
+    P, P, D2
+    D2, D2, N3
+    SUpper, SUpper, SUpper
+    SUpper, N3, N3
+    SUpper, N3, N3
+
+Line:
+    P, D2, D2
+    N3, N3, D2
+    D2, P, M1
+    G3, G3, G3
+    R2, SLower, SLower
+    R2, SLower, SLower
+    SLower, SLower, R2
+    G3, M1, G3
+
+Line:
+    M1, G3, G3
+    G3, G3, M1
+    G3, R2, R2
+    G3, G3, G3
+    M1, M1, P
+    P, P, D2
+    P, D2, D2
+    D2, N3, N3
+
+Line:
+    SUpper, SUpper, N3
+    N3, SUpper, SUpper
+    N3, N3, N3
+    N3, N3, N3
+    N3, D2, P
+    M1, M1, M1
+    M1, M1, P
+    P, M1, M1
+
+Line:
+    M1, G3, R2
+    R2, SLower, SLower
+    SLower, SLower, SLower
+    SLower, SLower, SLower
+    SLower, R2, G3
+    R2, G3, R2
+    SLower, R2, R2
+    SLower, SLower, SLower
+

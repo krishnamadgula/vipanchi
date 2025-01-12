@@ -21,32 +21,57 @@ type WAVEncoder struct {
 }
 
 func NewWAVEncoder(output io.WriteSeeker,
-	tempo, Kaalam int) *WAVEncoder {
+	tempo, kaalam int,
+	instrument instruments.Instrument,
+) *WAVEncoder {
 	// TODO revisit encoder initialization, currently it is one time use
 	e := wav.NewEncoder(output, KHz44, 16, 1, 1)
-	return &WAVEncoder{e: e, Tempo: tempo, Kaalam: Kaalam}
+	return &WAVEncoder{e: e, Tempo: tempo, Kaalam: kaalam, Instrument: instrument}
 }
 
 func (w *WAVEncoder) Close() error {
 	return w.e.Close()
 }
-
-func (w *WAVEncoder) Encode(freq float32) error {
-
+func (w *WAVEncoder) Encode(freqs []float32) error {
 	// Generate sine wave data for each frequency in the line
-	data := generateSineWave(freq, w.Tempo*w.Kaalam, KHz44)
+	res := make([][]int, 0, len(freqs))
+	for _, freq := range freqs {
+		data := w.generateSineWave(freq, w.Tempo*w.Kaalam, KHz44)
+		res = append(res, data)
+	}
 
-	// Write the audio data to the encoder
-	return w.e.Write(&audio.IntBuffer{
-		Data:           data,
-		Format:         audio.FormatMono44100,
-		SourceBitDepth: 16,
-	})
+	// add overlap
+	for i := range res {
+		if i != len(res)-1 {
+			res[i] = mixSamples(res[i], res[i+1], w.Instrument.Overlap)
+		}
+	}
+
+	for _, data := range res {
+		if err := w.e.Write(&audio.IntBuffer{
+			Data:           data,
+			Format:         audio.FormatMono44100,
+			SourceBitDepth: 16,
+		}); err != nil {
+			return err
+		}
+	}
+
+	return nil
+}
+
+func mixSamples(a, b []int, overlap float64) []int {
+	for i := range a {
+		if i >= int(float64(len(a))*(1-overlap)) {
+			a[i] = (a[i] + b[i]) / 2
+		}
+	}
+	return a
 }
 
 // generateSineWave generates a sine wave with harmonics for the given frequency and duration
 // tempo is in beats per minute, rate is sample rate in Hz
-func generateSineWave(freq float32, tempo, rate int) []int {
+func (w *WAVEncoder) generateSineWave(freq float32, tempo, rate int) []int {
 	// Calculate duration in seconds based on tempo (beats per minute)
 	// For example, if tempo is 120 BPM, each beat is 0.5 seconds
 	secondsPerBeat := 60.0 / float32(tempo)
@@ -67,7 +92,7 @@ func generateSineWave(freq float32, tempo, rate int) []int {
 		sample *= instruments.GetEnvelopeMultiplier(
 			t,
 			float64(numSamples)/float64(rate),
-			instruments.Veena,
+			w.Instrument,
 		)
 		// Convert to integer and clip to prevent overflow
 		sampleInt := int(sample)

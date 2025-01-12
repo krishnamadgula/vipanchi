@@ -12,4 +12,5 @@ var Flute = Instrument{
 	Decay:   0.1,  // Short decay
 	Sustain: 0.8,  // Strong sustain
 	Release: 0.15, // Quick release
+	Overlap: 0.2,  // Moderate overlap for legato effect
 }

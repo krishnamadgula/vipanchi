@@ -13,4 +13,5 @@ var AcousticGuitar = Instrument{
 	Decay:   0.15,  // Short-moderate decay
 	Sustain: 0.7,   // Medium-high sustain level
 	Release: 0.25,  // Moderate release
+	Overlap: 0.1,   // Slight overlap between notes for smooth transitions
 }

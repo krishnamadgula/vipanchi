@@ -1,0 +1,106 @@
+
+Raagam: Kalyani
+Taalam: Aadi
+Kaala: 2
+
+
+Line:
+    SLower, SLower
+    SLower, SLower
+    SLower, SLower
+    R2, SLower
+    SLower, SLower
+    SLower, SLower
+    SLower, SLower
+    R2, R2
+
+Line:
+    SLower, R2
+    R2, SLower
+    SLower, R2
+    SLower, SLower
+    R2, R2
+    G3, G3
+    G3, R2
+    R2, R2
+
+Line:
+    R2, G3
+    G3, R2
+    R2, SLower
+    SLower, SLower
+    SLower, SLower
+    SLower, SLower
+    R2, R2
+    R2, R2
+
+Line:
+    SLower, SLower
+    SLower, SLower
+    SLower, R2
+    G3, M2
+    P, P
+    P, P
+    M2, G3
+    M2, G3
+
+Line:
+    G3, R2
+    SLower, R2
+    G3, M2
+    P, P
+    P, P
+    D2, D2
+    D2, D2
+    P, M2
+
+Line:
+    M2, P
+    D2, P
+    D2, P
+    D2, D2
+    D2, P
+    P, P
+    P, M2
+    P, P
+
+Line:
+    M2, G3
+    G3, R2
+    R2, R2
+    G3, M2
+    G3, G3
+    M2, M2
+    G3, M2
+    P, D2
+
+Line:
+    SUpper, SUpper
+    SUpper, SUpper
+    SUpper, SUpper
+    N3, D2
+    D2, P
+    D2, P
+    D2, N3
+    D2, N3
+
+Line:
+    N3, SUpper
+    SUpper, SUpper
+    N3, SUpper
+    N3, N3
+    D2, N3
+    SUpper, SUpper
+    N3, SUpper
+    N3, SUpper
+
+Line:
+    SUpper, SUpper
+    SUpper, SUpper
+    N3, N3
+    SUpper, SUpper
+    SUpper, SUpper
+    SUpper, SUpper
+    N3, D2
+    D2, D2
+

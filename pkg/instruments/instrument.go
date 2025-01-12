@@ -12,7 +12,11 @@ type Instrument struct {
 	Sustain float64
 	// Release is the time in seconds for the note to fade to zero
 	Release float64
+	// Overlap allows notes to blend together
+	Overlap float64
 }
+
+
 
 func GetEnvelopeMultiplier(t, duration float64, inst Instrument) float64 {
 	attackTime := inst.Attack

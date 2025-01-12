@@ -1,0 +1,106 @@
+
+Raagam: Aananda_Bhairavi
+Taalam: Aadi
+Kaala: 2
+
+
+Line:
+    G2, G2
+    G2, R2
+    SLower, SLower
+    G2, R2
+    R2, M1
+    P, D2
+    D2, SUpper
+    N2, D2
+
+Line:
+    SUpper, SUpper
+    SUpper, SUpper
+    SUpper, SUpper
+    SUpper, N2
+    N2, N2
+    N2, D2
+    D2, D2
+    D2, D2
+
+Line:
+    SUpper, N2
+    N2, N2
+    N2, N2
+    D2, P
+    M1, P
+    D2, D2
+    SUpper, N2
+    D2, SUpper
+
+Line:
+    N2, D2
+    SUpper, SUpper
+    SUpper, N2
+    N2, N2
+    N2, D2
+    P, D2
+    SUpper, N2
+    N2, N2
+
+Line:
+    D2, SUpper
+    SUpper, SUpper
+    SUpper, SUpper
+    SUpper, SUpper
+    SUpper, N2
+    N2, N2
+    N2, N2
+    N2, N2
+
+Line:
+    D2, P
+    P, M1
+    G2, R2
+    M1, M1
+    P, D2
+    D2, SUpper
+    SUpper, N2
+    N2, N2
+
+Line:
+    N2, N2
+    D2, SUpper
+    SUpper, SUpper
+    N2, N2
+    N2, N2
+    N2, D2
+    SUpper, N2
+    N2, N2
+
+Line:
+    N2, N2
+    D2, P
+    D2, SUpper
+    SUpper, N2
+    N2, N2
+    N2, N2
+    N2, D2
+    P, P
+
+Line:
+    P, D2
+    D2, SUpper
+    SUpper, SUpper
+    SUpper, SUpper
+    SUpper, SUpper
+    SUpper, SUpper
+    N2, D2
+    SUpper, N2
+
+Line:
+    D2, SUpper
+    SUpper, N2
+    N2, D2
+    SUpper, SUpper
+    N2, D2
+    P, M1
+    M1, M1
+    P, D2
+
