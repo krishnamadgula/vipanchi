@@ -1,0 +1,106 @@
+
+Raagam: Shivaranjani
+Taalam: Aadi
+Kaala: 2
+
+
+Line:
+    R2, R2
+    G3, P
+    G3, G3
+    P, P
+    D1, P
+    G3, G3
+    R2, G3
+    P, D1
+
+Line:
+    SUpper, D1
+    SUpper, SUpper
+    D1, P
+    P, P
+    D1, D1
+    P, D1
+    SUpper, D1
+    SUpper, SUpper
+
+Line:
+    D1, P
+    G3, G3
+    P, G3
+    R2, SLower
+    SLower, SLower
+    SLower, SLower
+    SLower, R2
+    R2, SLower
+
+Line:
+    SLower, SLower
+    R2, SLower
+    SLower, SLower
+    SLower, R2
+    R2, SLower
+    SLower, R2
+    SLower, R2
+    SLower, SLower
+
+Line:
+    SLower, R2
+    R2, G3
+    R2, SLower
+    R2, SLower
+    SLower, SLower
+    SLower, SLower
+    R2, G3
+    R2, G3
+
+Line:
+    P, G3
+    R2, R2
+    G3, P
+    G3, P
+    G3, P
+    P, G3
+    G3, R2
+    R2, G3
+
+Line:
+    D1, P
+    D1, D1
+    SUpper, D1
+    P, D1
+    SUpper, SUpper
+    D1, D1
+    D1, SUpper
+    SUpper, D1
+
+Line:
+    D1, P
+    D1, P
+    G3, R2
+    R2, G3
+    G3, P
+    P, G3
+    P, P
+    D1, D1
+
+Line:
+    D1, SUpper
+    SUpper, SUpper
+    D1, D1
+    D1, P
+    D1, SUpper
+    SUpper, D1
+    SUpper, D1
+    D1, SUpper
+
+Line:
+    SUpper, SUpper
+    SUpper, SUpper
+    SUpper, SUpper
+    SUpper, SUpper
+    D1, SUpper
+    SUpper, SUpper
+    SUpper, SUpper
+    D1, D1
+

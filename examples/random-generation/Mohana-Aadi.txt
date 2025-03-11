@@ -1,106 +1,106 @@
 
 Raagam: Mohana
 Taalam: Aadi
-Kaala: 3
+Kaala: 2
 
 
 Line:
-    R2, R2, R2
-    G3, R2, G3
-    G3, P, P
-    G3, G3, P
-    D2, P, P
-    G3, R2, G3
-    P, D2, SUpper
-    SUpper, SUpper, D2
+    SLower, SLower
+    SLower, SLower
+    SLower, R2
+    SLower, SLower
+    SLower, SLower
+    SLower, SLower
+    R2, G3
+    R2, G3
 
 Line:
-    G3, P, P
-    P, G3, P
-    P, G3, P
-    G3, R2, G3
-    G3, G3, P
-    G3, G3, G3
-    G3, P, D2
-    P, G3, G3
+    G3, R2
+    R2, SLower
+    SLower, SLower
+    SLower, R2
+    R2, G3
+    P, P
+    D2, D2
+    SUpper, SUpper
 
 Line:
-    G3, G3, G3
-    P, P, G3
-    P, G3, G3
-    P, P, G3
-    G3, R2, SLower
-    R2, R2, R2
-    R2, SLower, SLower
-    R2, SLower, SLower
+    SUpper, D2
+    SUpper, D2
+    P, D2
+    P, D2
+    P, G3
+    G3, R2
+    G3, G3
+    P, D2
 
 Line:
-    SLower, R2, G3
-    P, P, P
-    G3, G3, P
-    D2, SUpper, SUpper
-    D2, P, G3
-    G3, G3, P
-    P, P, G3
-    G3, R2, SLower
+    P, P
+    P, P
+    G3, R2
+    R2, SLower
+    SLower, SLower
+    SLower, R2
+    R2, SLower
+    R2, G3
 
 Line:
-    SLower, SLower, SLower
-    SLower, SLower, SLower
-    SLower, SLower, SLower
-    SLower, SLower, SLower
-    R2, SLower, R2
-    G3, P, P
-    P, G3, P
-    G3, R2, G3
+    P, G3
+    G3, P
+    G3, P
+    D2, P
+    G3, R2
+    R2, SLower
+    SLower, SLower
+    R2, SLower
 
 Line:
-    R2, SLower, SLower
-    SLower, R2, G3
-    P, D2, P
-    G3, R2, G3
-    R2, R2, G3
-    G3, G3, P
-    P, D2, P
-    G3, G3, R2
+    SLower, SLower
+    SLower, SLower
+    SLower, R2
+    G3, R2
+    R2, R2
+    R2, G3
+    R2, G3
+    R2, R2
 
 Line:
-    R2, G3, P
-    G3, R2, SLower
-    R2, G3, R2
-    R2, G3, R2
-    G3, R2, G3
-    R2, SLower, SLower
-    R2, R2, G3
-    R2, R2, SLower
+    G3, P
+    D2, SUpper
+    SUpper, D2
+    P, P
+    D2, P
+    G3, R2
+    SLower, SLower
+    SLower, R2
 
 Line:
-    SLower, SLower, SLower
-    SLower, SLower, SLower
-    SLower, R2, R2
-    G3, P, P
-    G3, G3, R2
-    G3, P, G3
-    G3, G3, G3
-    G3, P, P
+    SLower, SLower
+    SLower, SLower
+    SLower, SLower
+    SLower, SLower
+    R2, R2
+    SLower, SLower
+    R2, R2
+    SLower, SLower
 
 Line:
-    D2, SUpper, D2
-    P, G3, R2
-    R2, R2, R2
-    G3, R2, SLower
-    R2, R2, G3
-    P, G3, G3
-    G3, R2, SLower
-    SLower, R2, R2
+    G3, R2
+    SLower, R2
+    G3, G3
+    R2, R2
+    SLower, SLower
+    SLower, SLower
+    SLower, SLower
+    R2, SLower
 
 Line:
-    P, P, G3
-    P, D2, SUpper
-    SUpper, D2, SUpper
-    SUpper, SUpper, SUpper
-    SUpper, SUpper, D2
-    D2, SUpper, SUpper
-    SUpper, SUpper, SUpper
-    SUpper, SUpper, SUpper
+    SLower, R2
+    R2, SLower
+    R2, SLower
+    SLower, SLower
+    SLower, SLower
+    SLower, SLower
+    R2, G3
+    P, D2
 
